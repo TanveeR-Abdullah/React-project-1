@@ -12,7 +12,7 @@ function ExploreMenu({category, setCategory}) {
                 {menu_list.map((item, index) => {
                     return (
                         <div onClick={()=>{setCategory(prev=>prev===item.menu_name?"All":item.menu_name)}} key={index} >
-                            <img  className={`${category === item.menu_name ? "" : ""} cursor-pointer rounded-full w-50 size-35`} src={item.menu_image}  />
+                            <img  className={`${category === item.menu_name ? "ring-2 ring-amber-500 " : ""} cursor-pointer rounded-full w-50 size-35`} src={item.menu_image}  />
                             <p className='text-amber-500 text-bold ' >{item.menu_name}</p>
 
                         </div>
