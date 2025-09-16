@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import { assets } from '../assets/frontend_assets/assets'
+import {NavLink } from 'react-router-dom';
 
 const NavBar = () => {
 
@@ -15,10 +16,10 @@ const NavBar = () => {
       <ul className='flex gap-6 text-red-500 font-bold '>
         <p>{console.log(setMenu)}</p>
 
-        <li onClick={() => setMenu("home")} className={`${menu === "home" ? "border-b" : ""} cursor-pointer`}  > Home</li>
-        <li onClick={() => setMenu("menu")} className={`${menu === "menu" ? "border-b" : ""} cursor-pointer`}> Menu</li>
-        <li onClick={() => setMenu("mobile-app")} className={`${menu === "mobile-app" ? "border-b" : ""} cursor-pointer`}> Mobile app</li>
-        <li onClick={() => setMenu("contact-us")} className={`${menu === "contact-us" ? "border-b" : ""} cursor-pointer`}> Contact us</li>
+        <NavLink to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "border-b" : ""} cursor-pointer`}  > Home</NavLink>
+        <NavLink to="/menu" onClick={() => setMenu("menu")} className={`${menu === "menu" ? "border-b" : ""} cursor-pointer`}> Menu</NavLink>
+        <NavLink to="/mobile-app" onClick={() => setMenu("mobile-app")} className={`${menu === "mobile-app" ? "border-b" : ""} cursor-pointer`}> Mobile app</NavLink>
+        <NavLink to="/Contact" onClick={() => setMenu("contact-us")} className={`${menu === "contact-us" ? "border-b" : ""} cursor-pointer`}> Contact us</NavLink>
       </ul>
 
       <div className='flex gap-8 items-center '>
